@@ -194,7 +194,7 @@ open class Procedure: Operation, ProcedureProtocol {
 
     private var _observers = Protector([AnyObserver<Procedure>]())
 
-    fileprivate(set) var observers: [AnyObserver<Procedure>] {
+    public fileprivate(set) var observers: [AnyObserver<Procedure>] {
         get { return _observers.read { $0 } }
         set {
             _observers.write { (ward: inout [AnyObserver<Procedure>]) in
