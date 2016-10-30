@@ -55,6 +55,8 @@ open class NetworkDataProcedure<Session: URLSessionTaskFactory>: Procedure, Resu
             strongSelf.finish()
         }
 
+        log.notice(message: "Will make request: \(request)")
+
         task?.resume()
     }
 }
